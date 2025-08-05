@@ -58,5 +58,5 @@ with Python 3.13.
                 ``[Install]``<br>
                 ``WantedBy=multi-user.target``<br>
      5.8     Save & Exit.<br>
-    5.9     $ systemctl enable alienfx.service
-    5.10    Reboot
+    5.9     ``$ systemctl enable alienfx.service``<br>
+    5.10    Reboot<br>
