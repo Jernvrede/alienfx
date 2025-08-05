@@ -1,101 +1,65 @@
+# How to get AlienFX working on Garuda 2025 (Arch)
+(Desktop Alienware R4)
+-> For lvl 1 n00bs <-
 
-AlienFX is a Linux utility to control the lighting effects of your Alienware computer.
-============
+The outdated package alienfx 2.4.3-1 will work. It just needs some TLC.
+It is unfortunately dependant on python-future. Python-future is no longer compatible
+with Python 3.13.
 
-At present there is a CLI version (``alienfx``) and a gtk GUI version (``alienfx-gtk``). And 
-has been tested on Debian/Ubuntu/Kali/Mint, Fedora and Arch Linux.
+## 1.  Installing:
+        
+    1.1     Using Octopi we can install all other dependancies:
+            Install python, python-cairo, python-gobject, python-pyusb AND python-fissix
 
-[![Version](https://img.shields.io/badge/version-2.4.3-red.svg)]() [![GitHub license](https://img.shields.io/github/license/trackmastersteve/alienfx.svg)](https://github.com/trackmastersteve/alienfx/tree/2.1.x/LICENSE) [![Python3](https://img.shields.io/badge/python-3.12-green.svg)]() [![GitHub issues](https://img.shields.io/github/issues/trackmastersteve/alienfx.svg)](https://github.com/trackmastersteve/alienfx/issues) [![GitHub stars](https://img.shields.io/github/stars/trackmastersteve/alienfx.svg)](https://github.com/trackmastersteve/alienfx/stargazers)  [![GitHub forks](https://img.shields.io/github/forks/trackmastersteve/alienfx.svg)](https://github.com/trackmastersteve/alienfx/network) 
+## 2.  "Fixing" python-future.
+        We are modifying the AUR-package to suit our needs. In this lucky case we can
+        redirect lib2to3 to fissix instead.
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) Contributers needed! Please read [CONTRIBUTING.md](https://github.com/trackmastersteve/alienfx/blob/master/CONTRIBUTING.md) for further details. 
+    2.1     Open Terminal (Fish)
+    2.2     $ mkdir snuffaluffagus (for example)
+    2.3     $ cd snuffaluffagus
+    2.4     $ git clone https://aur.archlinux.org/python-future.git
+    2.5     $ cd python-future
+    2.6     $ nano PKGBUILD (or kate or other preffered editor)
+    2.7     Insert (at bottom):
+               prepare() {
+                    cd "$srcdir"/future-$pkgver
+                    find . -type f -name "*.*" -exec sed -i 's|lib2to3|fissix|g' {} +
+                    }
+    2.8     Save & Exit.
+    2.9     $ makepkg -sri
+    2.10    Close terminal
 
-![AlienFX](https://github.com/trackmastersteve/alienfx/blob/master/alienfx/data/pixmaps/alienfx.png)
+## 3.  Install AlienFX.
+    Find it in Octopi and install.
 
-## Table of Contents
+## 4.  Setting a Theme.
 
-- [Dependencies](#dependencies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
+    4.1     Open Terminal (Fish)
+    4.2     $ sudo alienfx -z
+    4.3     Allow the zonescan. Follow the instructions.
+    4.4     $ sudo alienfx-gtk
+    4.5     Nevermind the labels on the different "zones". Trial and error till you find a suitable setting.
+            (Don´t forget to press Apply otherwise nothing will happen)
+    4.6     When you´re satisfied save your theme. (Lets call it: Starchild)
 
-## Dependencies
+## 5.  Making it stick through reboot.
 
-AlienFX is written in python and has been tested on ``python 3.12``. It requires
-the following python packages to run:
-
-On Arch Linux:
-
-```sh
-      $ sudo pacman -S python-pyusb python-setuptools python-gobject python-cairo python-future
-```
-    
-On Debian/Ubuntu/Mint/Kali: 
-
-```sh
-      $ sudo apt install libcairo2-dev python3-gi python3-gi-cairo python3-setuptools python3-usb python3-future
-```
-
-On Fedora: 
-
-```sh
-      $ sudo dnf install cairo-devel python3-gobject cairo-gobject python3-setuptools python3-pyusb python3-future
-```
-
-## Installation
-
-On Arch Linux you can install package from AUR: [alienfx](https://aur.archlinux.org/packages/alienfx/)
-
-For manual installation of AlienFX, use the following commands:
-  
-  ```sh
-      $ sudo python setup.py install
-  ```
-  ```sh
-      $ sudo python setup.py install_data
-  ```
-
-Note that the second invocation is required to ensure that icon files etc. are
-properly installed.
-
-The installation includes a udev rules file that allows AlienFX to access the 
-AlienFX USB controller on your computer without needing root permissions. If 
-you run the install commands without sudo, then the udev rules file will not 
-be installed. 
-
-## Usage
-
-Lighting configurations are stored in "theme files", which are simple json
-files stored in ``$XDG_CONFIG_HOME/alienfx``. If ``XDG_CONFIG_HOME`` is not set, then
-``~/.config/alienfx`` is used. Both the CLI and GUI programs use these theme
-files, and the GUI program allows you to create new themes as well.
-
-See the man page of alienfx ``$ man alienfx`` for the cli options supported. 
-
-If you run the CLI-version of alienfx on a currently unsupported device, the program will ask you if you wish to perform a zonescan.
-Please consider using this feature to determine the correct zone-codes for your device.
-If you found the correct codes, please contribute to the project. - You'll find more information in Section [Contributing](#contributing) 
-
-Supported models and adding support for new models:
---------------------------------------------------
-
-Please have a look at [devicelist](https://github.com/trackmastersteve/alienfx/blob/master/docs/Knowledgebase/Devicelist.md)
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://github.com/trackmastersteve/alienfx/blob/master/CONTRIBUTING.md) for further details. 
-
-## Further Informatin
-If you're looking for further information, have a look in docs/Knowledgebase
-
-## Disclaimer and License
-If you use this software, you use it AT YOUR OWN RISK.
-I and the contributing developers DO NOT accept responsibility for frying your AlienFX controller chip with this code.
-Haven't fried any yet, but this is just so we can sleep at night. ;)
-
-
-This software is licenced under the [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html)
-
-This is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation.
-
-This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [GNU GPL]((https://www.gnu.org/licenses/gpl-3.0.html)) for more detail.
-
+    5.1     Open Terminal (Fish)
+    5.2     $ sudo nano /usr/local/sbin/alienfx-go.sh (creating a bash script, it will be empty)
+    5.3     Insert:             (#!-line MUST be the first line of the file)
+                #!/bin/bash/
+                alienfx -t Starchild
+    5.4     Save & Exit.
+    5.5     $ sudo chmod 0700 /usr/local/sbin/alienfx-go.sh
+    5.6     $ sudo nano /etc/systemd/system/alienfx.service  (creating a systemd unit file, it will be empty)
+    5.7     Insert:
+                [Unit]
+                Description=AlienFX Theme from Boot
+                [Service]
+                ExecStart=/usr/local/sbin/alienfx-go.sh
+                [Install]
+                WantedBy=multi-user.target
+    5.8     Save & Exit.
+    5.9     $ systemctl enable alienfx.service
+    5.10    Reboot
