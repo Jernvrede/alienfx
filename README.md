@@ -40,7 +40,7 @@ with Python 3.13.
     4.3     Allow the zonescan. Follow the instructions.
     4.4     $ sudo alienfx-gtk
     4.5     Nevermind the labels on the different "zones". Trial and error till you find a suitable setting.
-            (Don´t forget to press Apply otherwise nothing will happen)
+            I will try to get to updating them. (Don´t forget to press Apply otherwise nothing will happen)
     4.6     When you´re satisfied save your theme. (Lets call it: Starchild)
 
 ## 5.  Making it stick through reboot.
