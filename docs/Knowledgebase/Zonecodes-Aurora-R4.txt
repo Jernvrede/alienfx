@@ -1,0 +1,10 @@
+These are your 8 zonecodes for the current controller ("VID: 0x187c / DEV: 0x0513"):
+
+alienhead: 0x0001
+topleft: 0x0002
+topright: 0x0004
+frontbottom: 0x0008
+frontleft: 0x0020
+frontright: 0x0040
+sideleft: 0x0080
+sideright: 0x0100
