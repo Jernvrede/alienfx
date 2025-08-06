@@ -1,5 +1,5 @@
 # How to get AlienFX working on Garuda 2025 (Arch)
-(I´m focusing on making this work for my Alienware R4 Desktop)
+**(I´m focusing on making this work for my Alienware R4 Desktop)**
 -> For lvl 1 n00bs <-
 
 (This is a bastardized way of using the original package.)<br>
@@ -10,7 +10,7 @@ with Python 3.13.
 1.  ## Installing:
         
     1.1     Using Octopi we can install all other dependancies:<br>
-            Install python, python-cairo, python-gobject, python-pyusb AND python-fissix<br>
+            Install python, python-cairo, python-gobject, python-pyusb **AND** python-fissix<br>
 
  2.  ## "Fixing" python-future.
         We are modifying the AUR-package to suit our needs. In this lucky case we can
