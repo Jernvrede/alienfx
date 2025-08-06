@@ -53,13 +53,20 @@ class AlienFXController(object):
     supported_controllers = []
     
     # Zone names
+    ZONE_LEFT_PANEL = "Left Panel"              # R4 Desktop
+    ZONE_RIGHT_PANEL = "Right Panel"            # R4 Desktop
+    ZONE_FRONT_BOTTOM = "Front Bottom"          # R4 Desktop
+    ZONE_FRONT_LEFT = "Front Left"              # R4 Desktop
+    ZONE_FRONT_RIGHT = "Front Right"            # R4 Desktop
+    ZONE_TOP_LEFT = "Top Left"                  # R4 Desktop
+    ZONE_TOP_RIGHT = "Top Right"                # R4 Desktop
     ZONE_LEFT_KEYBOARD = "Left Keyboard"
     ZONE_MIDDLE_LEFT_KEYBOARD = "Middle-left Keyboard"
     ZONE_MIDDLE_RIGHT_KEYBOARD = "Middle-right Keyboard"
     ZONE_RIGHT_KEYBOARD = "Right Keyboard"
     ZONE_RIGHT_SPEAKER = "Right Speaker"
     ZONE_LEFT_SPEAKER = "Left Speaker"
-    ZONE_ALIEN_HEAD = "Alien Head"
+    ZONE_ALIEN_HEAD = "Alien Head"              # R4 Desktop
     ZONE_LOGO = "Logo"
     ZONE_TOUCH_PAD = "Touchpad"
     ZONE_MEDIA_BAR = "Media Bar"
