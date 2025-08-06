@@ -2,8 +2,8 @@
 (I´m focusing on making this work for my Alienware R4 Desktop)
 -> For lvl 1 n00bs <-
 
-(This is a bastardized way of using the original package.)
-The outdated package alienfx 2.4.3-1 will work. It just needs some TLC.
+(This is a bastardized way of using the original package.)<br>
+The outdated package alienfx 2.4.3-1 will work. It just needs some TLC.<br>
 It is unfortunately dependant on python-future. Python-future is no longer compatible
 with Python 3.13.
 
