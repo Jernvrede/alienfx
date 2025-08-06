@@ -66,7 +66,7 @@ class AlienFXController(object):
     ZONE_RIGHT_KEYBOARD = "Right Keyboard"
     ZONE_RIGHT_SPEAKER = "Right Speaker"
     ZONE_LEFT_SPEAKER = "Left Speaker"
-    ZONE_ALIEN_HEAD = "Alien Head"              # R4 Desktop
+    ZONE_ALIEN_HEAD = "Alien Head"              # Common Laptop & R4 Desktop
     ZONE_LOGO = "Logo"
     ZONE_TOUCH_PAD = "Touchpad"
     ZONE_MEDIA_BAR = "Media Bar"
