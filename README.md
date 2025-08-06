@@ -38,11 +38,20 @@ with Python 3.13.
      4.2     ``$ sudo alienfx -z``<br>
      4.3     Allow the zonescan. Follow the instructions.<br>
      4.4     ``$ sudo alienfx-gtk``<br>
-     4.5     Nevermind the labels on the different "zones". Trial and error till you find a suitable setting.<br>
-                I will try to get to updating them. (Don´t forget to press Apply otherwise nothing will happen)<br>
+     4.5     Nevermind the labels on the different "zones". I will try to get to updating them.<br>
+                 --- For the time being the following zones correspond with the R4:<br>
+                 * Left Keyboard = Left Sidepanel<br>
+                 * Middle-left Keyboard = Top Right<br>
+                 * Middle-right Keyboard = Top Left<br>
+                 * Right Keyboard = Right Sidepanel<br>
+                 * Right Speaker = Left Frontpanel<br>
+                 * Left Speaker = Right Frontpanel<br>
+                 * Alien Head = Alien Head<br>
+                 * Logo = Bottom Front<br>
+                 (Don´t forget to press Apply otherwise nothing will happen)<br>
      4.6     When you´re satisfied save your theme. (Lets call it: Starchild)<br>
 
- 5.  ## Making it stick through reboot.
+ 6.  ## Making it stick through reboot.
      5.1     Open Terminal (Fish)<br>
      5.2     ``$ sudo nano /usr/local/sbin/alienfx-go.sh`` (creating a bash script, it will be empty)<br>
      5.3     Insert:             (#!-line MUST be the first line of the file)<br>
