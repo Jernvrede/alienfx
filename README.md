@@ -32,14 +32,14 @@ with Python 3.13.
     2.10    Close terminal<br>
 
  3.  ## Install AlienFX.
-        Open Octopi and install.
+        Open Terminal (Fish)<br>
+        ``$ sudo yay alienfx``<br>
+        Don´t accidentally install alienfx-lite...<br>
     
  4.  ## Setting a Theme.
      4.1     Open Terminal (Fish)<br>
-     4.2     ``$ sudo alienfx -z``<br>
-     4.3     Allow the zonescan. Follow the instructions.<br>
-     4.4     ``$ sudo alienfx-gtk``<br>
-     4.5     Nevermind the labels on the different "zones". I will try to get to updating them.<br>
+     4.2     ``$ sudo alienfx-gtk``<br>
+     4.3     Nevermind the labels on the different "zones". I will try to get to updating them.<br>
                  --- For the time being the following zones correspond with the R4:<br>
                  * Left Keyboard = Left Sidepanel<br>
                  * Middle-left Keyboard = Top Right<br>
@@ -50,7 +50,7 @@ with Python 3.13.
                  * Alien Head = Alien Head<br>
                  * Logo = Bottom Front<br>
                  (Don´t forget to press Apply otherwise nothing will happen)<br>
-     4.6     When you´re satisfied save your theme. (Lets call it: Starchild)<br>
+     4.4     When you´re satisfied save your theme. (Lets call it: Starchild)<br>
 
  6.  ## Making it stick through reboot.
      5.1     Open Terminal (Fish)<br>
