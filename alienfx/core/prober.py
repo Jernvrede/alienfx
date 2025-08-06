@@ -37,6 +37,7 @@ import usb.core
 from alienfx.core.controller import AlienFXController as AlienFXController
 
 """ Import all subclasses of AlienFXController here. """
+import alienfx.core.controller_desktopr4 ## Due to conflicting controllers this is added first (Desktop R4 Version)
 import alienfx.core.controller_a51m
 import alienfx.core.controller_area51
 import alienfx.core.controller_area51_r2
