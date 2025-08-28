@@ -56,7 +56,7 @@ with Python 3.13.
      5.1     Open Terminal (Fish)<br>
      5.2     ``$ sudo nano /usr/local/sbin/alienfx-go.sh`` (creating a bash script, it will be empty)<br>
      5.3     Insert:             (#!-line MUST be the first line of the file)<br>
-                ``#!/bin/bash/``<br>
+                ``#!/bin/bash``<br>
                 ``alienfx -t Starchild``<br>
      5.4     Save & Exit.<br>
      5.5     ``$ sudo chmod 0700 /usr/local/sbin/alienfx-go.sh``<br>
