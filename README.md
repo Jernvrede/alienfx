@@ -33,7 +33,7 @@ with Python 3.13.
 
  3.  ## Install AlienFX.
         Open Terminal (Fish)<br>
-        ``$ sudo yay alienfx``<br>
+        ``$ yay alienfx``<br>
         Don´t accidentally install alienfx-lite...<br>
     
  4.  ## Setting a Theme.
