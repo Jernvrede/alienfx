@@ -10,7 +10,7 @@ with Python 3.13.
 
 1.  ## Installing:
         
-    1.1     Using Octopi we can install all other dependancies:<br>
+    1.1     Using Pacman we can install all other dependancies:<br>
             Install python, python-cairo, python-gobject, python-pyusb **AND** python-fissix<br>
 
  2.  ## "Fixing" python-future.
