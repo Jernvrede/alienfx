@@ -8,6 +8,9 @@ The outdated package alienfx 2.4.3-1 will work. It just needs some TLC.<br>
 It is unfortunately dependant on python-future. Python-future is no longer compatible
 with Python 3.13.
 
+[RECENTLY THERE HAVE BEEN AN UPDATE TO THE AUR PACKAGE] Dependencie of python-future is removed. The workaround may not be needed anymore. (Date: 251202)
+
+
 1.  ## Installing:
         
     1.1     Using Pacman we can install all other dependancies:<br>
